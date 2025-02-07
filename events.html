@@ -1,0 +1,799 @@
+<html>
+<head>
+  <style>
+    nav {
+        background-color:#cc4202; /* Orange color */
+        padding: 20px 50px; /* رجعت الحجم القديم */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .logo { flex: 0 0 auto; }
+    .logo img {
+        height: 40px;
+        width: auto;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; 
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 50%; 
+        transform: translateX(-50%); 
+        gap: 20px;
+    }
+
+    nav ul li { margin: 0; }
+
+    nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px; 
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+
+    nav ul li a:hover {
+        color: #4b4955;
+    }
+
+    #about {
+        background-image: url(1.png);
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        background-color: white;
+        padding: 50px;
+        border-radius: 10px;
+        transition: background-color 0.5s ease, transform 0.5s ease;
+        flex-direction: column; /* ترتيب العناصر عموديًا */
+        justify-content: center; /* توسيط عموديًا */
+        height: 100vh; /* جعل القسم يأخذ ارتفاع النافذة */
+        text-align: center;
+    }
+
+      
+    body {
+    font-family: 'Cairo', sans-serif;
+   
+}
+nav {
+  background-color:#cc4202;/* #2C3E50;/*#531803; /* Orange co lor */
+  padding: 10px 30px; 
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+}
+.logo{flex: 0 0  auto;}
+.logo img{
+  height: 40px;
+  width: auto;
+}
+
+nav ul {
+  
+  list-style: none;
+  padding: 0;
+  margin: 0; 
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%); 
+  gap: 20px;
+  
+}
+
+nav ul li {
+  margin: 0 ;
+  
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #4b4955;
+}
+    #about {
+    background-image: url(1.png);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    display: flex;
+  flex-direction: column; /* ترتيب العناصر عموديًا */
+  
+  justify-content: center; /* توسيط عموديًا */
+  
+  text-align: center;
+  }
+  .social-icons {
+    position: relative;
+    bottom: 0; 
+  left: 0;
+  margin: 10px; 
+  z-index: 1000;
+  gap: 15px;}
+
+.social-icons a img {
+  height: 30px;
+  width:30px;
+  /*filter:brightness() invert(1); */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1); 
+}.language-switch {
+    margin-left: auto;
+    margin-top: 10px;
+    padding: 6px 15px;
+    border-radius: 3px;
+    border: none;
+    background: linear-gradient(45deg, #ff6600, #ff9900);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em; /* تقليل الحجم */
+}
+
+.language-switch:hover {
+  background: linear-gradient(45deg, #ff9900, #ff6600);
+}
+
+
+    body {
+        background-image: url(1.png);
+    }
+
+    h2 {
+        font-size: xx-large;
+        text-align: center;
+        color: #cc4202;
+    }
+
+    @media only screen and (max-width: 300px) {
+        .text { font-size: 11px; }
+    }
+
+    .con {
+        background-image: url(5.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+        padding: 50px;
+        text-align: center;
+        color: #cc4202; 
+        font-size: 1.2em;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes fadeInText {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    footer {
+    background-color: #cc4202;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 23px;
+}
+.immage {
+    width: 95%; /* جعل الصورة أكبر من النص */
+    max-width: 1110px; /* تحديد الحد الأقصى للعرض */
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto; /* توسيط الصور وإضافة مسافة بينها */
+    border-radius: 10px; /* إضافة زوايا دائرية */
+}
+
+.timeline-item {
+  
+    max-width: 1200px; /* جعل البوكس بنفس عرض الصورة */
+    padding: 25px; /* تقليل التباعد الداخلي قليلاً */
+
+    position: relative;
+    
+    background-color: #f9f9f9;
+    border-left: 5px solid #cc4202;
+   
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+}
+
+.timeline-item h3 {
+    margin: 0;
+    font-size: 1.8em; /* تكبير العناوين */
+    color: #cc4202;
+}
+
+.timeline-item p {
+    font-size: 1.2em; /* ضبط حجم النص ليكون متناسق */
+    color: #cc4202;
+    line-height: 1.6; /* تحسين المسافة بين الأسطر */
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .immage {
+        width: 100%;
+    }
+
+    .timeline-item {
+        padding: 20px;
+    }
+
+    .timeline-item h3 {
+        font-size: 1.5em;
+    }
+
+    .timeline-item p {
+        font-size: 1em;
+    }
+}
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    .numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+    .mySlides {
+      display: none;
+      width: 100%;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .active-dot {
+      background-color: #717171;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .dots-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <nav>
+     
+      <div class="logo" ><img src="logo.png" alt="bvt logo" height="30pt" width="30pt"></div> 
+      <ul>
+        <li><a href="index2.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+        <li><a href="about.html" data-en="About Us" data-ar="معلومات عنا">About Us</a></li>
+        <li><a href="events.html" data-en="Events" data-ar="الفعاليات">Events</a></li>
+        <li><a href="Workshops.html" data-en="Workshops" data-ar="ورش العمل">Workshops</a></li>
+        <li><a href="index2.html#team-leaders" data-en="Team Leaders" data-ar="قادة الفريق">Team Leaders</a></li>
+    </ul>
+ 
+         <div class="social-icons">
+          <a href="https://www.facebook.com/BVT.JU" class="icon"><img src="facebook-new.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/bvt_ju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="icon"><img src="icons8-instagram-50.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/company/bvt-ju/posts/?feedView=all" class="icon"><img src="linkedin-ICON.webp" alt="LinkedIn"></a>
+      </div>
+      <select id="language-selector" class="language-switch">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+    </select>
+
+  </nav>
+  <h2 data-ar="فعالياتنا" data-en="EVENTS">EVENTS</h2>  
+    <div class="slideshow-container" id="event-slideshow1">
+        <div class="numbertext">1 / 2</div>
+      <img class="mySlides active" src="events/ibde2.jpeg" alt="Event 1">
+      <div class="numbertext">2 / 2</div>
+      <img class="mySlides" src="bvt photo.jpg" alt="Event 2">
+      <div class="numbertext">3 / 2</div>
+      <img class="mySlides" src="events/ibde.jpeg" alt="Event 2">
+      <div class="numbertext">4 / 2</div>
+      <img class="mySlides" src="events/ibdee.jpg" alt="Event 2">
+      <div class="numbertext">5 / 2</div>
+      <img class="mySlides" src="events/ibde4.jpeg" alt="Event 2">
+    
+      <a class="prev">&#10094;</a>
+      <a class="next">&#10095;</a>
+    </div>
+    
+    <div class="dots-container">
+        <span class="dot" data-slideshow="event-slideshow1"></span> 
+        <span class="dot" data-slideshow="event-slideshow1"></span> 
+        <span class="dot" data-slideshow="event-slideshow1"></span> 
+        <span class="dot" data-slideshow="event-slideshow1"></span>
+        <span class="dot" data-slideshow="event-slideshow1"></span> 
+ 
+      </div>
+     
+    </div>
+    <div class="timeline-item">
+       
+        <h3 data-en="IBDE2" data-ar="المنتدى الدولي الثاني للأعمال والاقتصاد الرقمي (IBDE)">IBDE2</h3>
+        <p data-en="The University of Jordan Hosts the 2nd International Business and Digital Economy (IBDE) Forum 2024
+
+        Under the patronage of UJ President Dr. Nathir Obeidat and Minister of Digital Economy and Entrepreneurship Ahmad Hanandeh, the School of Business hosted the 2nd Business and Digital Economy Forum 2024, bringing together over 300 experts and researchers from Jordan and abroad.
+        
+        The event featured 105 research papers across 34 sessions, covering topics like business management, accounting, finance, marketing, and digital transformation. Discussions focused on AI, fintech, investment trends, and the future of digital economies.
+        
+        For the second time, the student volunteer team successfully organized and managed the forum under the supervision of Dr. Hazar Hammoud, ensuring smooth operations and a professional experience for all attendees.
+        
+        The forum concluded with key recommendations emphasizing digital transformation, AI ethics, fintech development, and fostering research and innovation." data-ar="استضافت الجامعة الأردنية المنتدى الدولي الثاني للأعمال والاقتصاد الرقمي 2024
+
+        تحت رعاية رئيس الجامعة الأردنية الدكتور نذير عبيدات ووزير الاقتصاد الرقمي وريادة الأعمال أحمد حناندة، استضافت كلية الأعمال المنتدى الثاني للأعمال والاقتصاد الرقمي 2024، حيث جمع الحدث أكثر من 300 خبير وباحث من الأردن وخارجه.
+        
+        تميز الحدث بعرض 105 ورقة بحثية في 34 جلسة، تناولت مواضيع مثل إدارة الأعمال، المحاسبة، المالية، التسويق، والتحول الرقمي. وركزت النقاشات على الذكاء الاصطناعي، التكنولوجيا المالية، اتجاهات الاستثمار، ومستقبل الاقتصادات الرقمية.
+        
+        وللمرة الثانية، نجح فريق المتطوعين الطلاب في تنظيم وإدارة المنتدى تحت إشراف الدكتورة هازر حمود، مما ضمن سير الفعالية بسلاسة وتجربة مهنية لجميع الحضور.
+        
+        اختتم المنتدى بتوصيات رئيسية شددت على أهمية التحول الرقمي، أخلاقيات الذكاء الاصطناعي، تطوير التكنولوجيا المالية، وتعزيز البحث والابتكار.">
+          
+        The University of Jordan Hosts the 2nd International Business and Digital Economy (IBDE) Forum 2024
+
+            Under the patronage of UJ President Dr. Nathir Obeidat and Minister of Digital Economy and Entrepreneurship Ahmad Hanandeh, the School of Business hosted the 2nd Business and Digital Economy Forum 2024, bringing together over 300 experts and researchers from Jordan and abroad.
+            
+            The event featured 105 research papers across 34 sessions, covering topics like business management, accounting, finance, marketing, and digital transformation. Discussions focused on AI, fintech, investment trends, and the future of digital economies.
+            
+            For the second time, the student volunteer team successfully organized and managed the forum under the supervision of Dr. Hazar Hammoud, ensuring smooth operations and a professional experience for all attendees.
+            
+            The forum concluded with key recommendations emphasizing digital transformation, AI ethics, fintech development, and fostering research and innovation.</div>
+           </p>
+      </div>
+    </div>
+    <br>
+
+    <div class="slideshow-container" id="event-slideshow2">
+        <div class="numbertext">1 / 2</div>
+        <img class="mySlides active" src="events/icbt 2.JPG" alt="Event 1">
+        <div class="numbertext">2 / 2</div>
+        <img class="mySlides" src="events/icbt 3.JPG" alt="Event 2">
+        <div class="numbertext">3/ 2</div>
+        <img class="mySlides" src="events/icbt6.JPG" alt="Event 2"> 
+        <div class="numbertext">4 / 2</div>
+        <img class="mySlides" src="events/icbt team.JPG" alt="Event 2">
+        <div class="numbertext">5 / 2</div>
+        <img class="mySlides" src="events/icbt 5.jpeg" alt="Event 2">
+       
+      
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+      </div>
+      
+      <div class="dots-container">
+        <span class="dot" data-slideshow="event-slideshow2"></span> 
+        <span class="dot" data-slideshow="event-slideshow2"></span> 
+
+        <span class="dot" data-slideshow="event-slideshow2"></span> 
+        <span class="dot" data-slideshow="event-slideshow2"></span> 
+        <span class="dot" data-slideshow="event-slideshow2"></span> 
+      
+        
+      </div>
+       
+      </div>
+        <div class="timeline-item">
+          <H3 data-en="ICBT" data-ar="المؤتمر الدولي للأعمال والتكنولوجيا (ICBT)">ICBT</H3>
+          <P data-en="The University of Jordan’s School of Business, in collaboration with Ahlia University in Bahrain and the Euro-Mediterranean Academy of Business and Technology in Turkey, successfully hosted the International Conference on Business and Technology (ICBT). This two-day event gathered academics, industry leaders, and policymakers to explore the intersection of business and technology, focusing on AI applications, digital transformation, and sustainable entrepreneurship.
+          
+          The Business Volunteer Team played a vital role in the conference's organization and execution, ensuring a seamless experience for participants. Their dedication contributed to enriching discussions, facilitating networking opportunities, and enhancing the overall success of the event—demonstrating the university’s commitment to developing leadership and professional skills among its students." data-ar="نجحت كلية الأعمال في الجامعة الأردنية، بالتعاون مع جامعة أهلية في البحرين والأكاديمية الأوروبية المتوسطية للأعمال والتكنولوجيا في تركيا، في استضافة المؤتمر الدولي للأعمال والتكنولوجيا (ICBT). جمع هذا الحدث الذي استمر لمدة يومين أكاديميين قادة الصناعة، والأكاديميين، وصناع السياسات لاستكشاف تقاطع الأعمال والتكنولوجيا، مع التركيز على تطبيقات الذكاء الاصطناعي، والتحول الرقمي، وريادة الأعمال المستدامة.
+          
+          لعب فريق المتطوعين في مجال الأعمال دورًا حيويًا في تنظيم وتنفيذ المؤتمر، مما ضمن تجربة سلسة للمشاركين. وقد ساهم تفانيهم في إثراء النقاشات، وتسهيل فرص التواصل، وتعزيز النجاح العام للفعالية—مظهرًا التزام الجامعة بتطوير المهارات القيادية والمهنية بين طلابها.">
+            The University of Jordan’s School of Business, in collaboration with Ahlia University in Bahrain and the Euro-Mediterranean Academy of Business and Technology in Turkey, successfully hosted the International Conference on Business and Technology (ICBT). This two-day event gathered academics, industry leaders, and policymakers to explore the intersection of business and technology, focusing on AI applications, digital transformation, and sustainable entrepreneurship.
+
+    The Business Volunteer Team played a vital role in the conference's organization and execution, ensuring a seamless experience for participants. Their dedication contributed to enriching discussions, facilitating networking opportunities, and enhancing the overall success of the event—demonstrating the university’s commitment to developing leadership and professional skills among its students</P>
+   </p><br>
+    <br>
+        </div></div>
+
+        <br>
+
+   <div class="slideshow-container" id="event-slideshow3">
+        <div class="numbertext">1 / 2</div>
+        <img class="mySlides" src="events/annajah 4.jpeg" alt="Event 2">
+   
+        <div class="numbertext">2 / 2</div>
+        <img class="mySlides" src="events/annajah 3.jpeg" alt="Event 2">
+     
+        <div class="numbertext">3/ 2</div>
+        <img class="mySlides" src="events/annajah2.jpeg" alt="Event 2">
+        <div class="numbertext">4/ 2</div>
+        <img class="mySlides active" src="events/annajah 1.jpeg" alt="Event 1">
+        <div class="numbertext">5 / 2</div>
+        <img class="mySlides" src="events/annajah 5.JPG" alt="Event 2">
+        
+      
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+      </div>
+      
+      <div class="dots-container">
+        <span class="dot" data-slideshow="event-slideshow3"></span> 
+        <span class="dot" data-slideshow="event-slideshow3"></span> 
+        <span class="dot" data-slideshow="event-slideshow3"></span> 
+        <span class="dot" data-slideshow="event-slideshow3"></span> 
+
+        <span class="dot" data-slideshow="event-slideshow3"></span> 
+      </div>
+       
+      </div>
+      <br>
+
+        <div class="timeline-item">
+          <H3 data-en="An-Najah National University" data-ar="جامعة النجاح الوطنية">An-Najah National University</H3>
+          <P data-en="The University of Jordan and An-Najah National University in Palestine wrapped up their joint scientific conference, titled “Towards a Resilient Future: Bridging the Gap Between Innovation, Business Intelligence, and Sustainability in Modern Business,” organized by the Faculty of Business at the University of Jordan in collaboration with An-Najah’s Faculty of Business and Communication.
+          
+          The event, held both physically and virtually, featured prominent speakers, including university presidents and deans. Over two days, more than 75 peer-reviewed papers were presented, with participation from over 200 experts and researchers from over 14 countries. The conference discussed key topics such as fintech innovations, international financial reporting standards, digital marketing strategies, and the integration of AI in business operations.
+          
+          As part of the organizing team, the Faculty of Business volunteer group contributed to the success of the event through logistical support, coordination, and engaging with participants to ensure smooth conference proceedings.
+          
+          Key recommendations from the conference included encouraging the adoption of fintech and e-marketing by businesses, enhancing transparency, and implementing sustainability reporting alongside financial disclosures to ensure long-term viability.
+          
+          The conference concluded with awards for participants, certificates for contributors, and recognition of volunteers who played a pivotal role in the event's execution." 
+          
+          data-ar= "اختتمت الجامعة الأردنية وجامعة النجاح الوطنية في فلسطين مؤتمرهما العلمي المشترك تحت عنواننحو مستقبل مرن: سد الفجوة بين الابتكار، ذكاء الأعمال، والاستدامة في بيئة الأعمال الحديثة والذي نظمته كلية الأعمال في الجامعة الأردنية بالتعاون مع كلية الأعمال والاتصال في جامعة النجاح.
+          
+          عُقد المؤتمر بصيغة حضورية وافتراضية، وشهد مشاركة متحدثين بارزين، بما في ذلك رؤساء جامعات وعمداء كليات. وعلى مدار يومين، تم تقديم أكثر من 75 ورقة بحثية محكمة، بمشاركة أكثر من 200 خبير وباحث من أكثر من 14 دولة. وناقش المؤتمر موضوعات رئيسية، مثل الابتكارات في التكنولوجيا المالية (Fintech)، معايير التقارير المالية الدولية، استراتيجيات التسويق الرقمي، ودمج الذكاء الاصطناعي في العمليات التجارية.
+          
+          ساهم فريق المتطوعين في كلية الأعمال بدور حيوي في إنجاح المؤتمر، حيث قدم الدعم اللوجستي، وساعد في تنسيق الجلسات، وتفاعل مع المشاركين لضمان سير الفعاليات بسلاسة.
+          
+          التوصيات الرئيسية للمؤتمر شملت:
+          ✔ تشجيع الشركات على تبني التكنولوجيا المالية والتسويق الإلكتروني لتحسين الأداء وتعزيز التنافسية.
+          ✔ تعزيز الشفافية والإفصاح المالي من خلال تطبيق تقارير الاستدامة جنبًا إلى جنب مع التقارير المالية التقليدية لضمان استدامة الشركات على المدى الطويل.
+          
+          اختتم المؤتمر بتوزيع جوائز للمشاركين، وشهادات للمساهمين، وتكريم للمتطوعين تقديرًا لجهودهم الكبيرة في نجاح الحدث."
+          
+          
+          > 
+          
+The University of Jordan and An-Najah National University in Palestine wrapped up their joint scientific conference, titled “Towards a Resilient Future: Bridging the Gap Between Innovation, Business Intelligence, and Sustainability in Modern Business,” organized by the Faculty of Business at the University of Jordan in collaboration with An-Najah’s Faculty of Business and Communication.
+
+    The event, held both physically and virtually, featured prominent speakers, including university presidents and deans. Over two days, more than 75 peer-reviewed papers were presented, with participation from over 200 experts and researchers from over 14 countries. The conference discussed key topics such as fintech innovations, international financial reporting standards, digital marketing strategies, and the integration of AI in business operations.
+    
+    As part of the organizing team, the Faculty of Business volunteer group contributed to the success of the event through logistical support, coordination, and engaging with participants to ensure smooth conference proceedings.
+    
+    Key recommendations from the conference included encouraging the adoption of fintech and e-marketing by businesses, enhancing transparency, and implementing sustainability reporting alongside financial disclosures to ensure long-term viability.
+    
+    The conference concluded with awards for participants, certificates for contributors, and recognition of volunteers who played a pivotal role in the event's execution.</p>
+        </p>
+  <br>
+    <br>
+        </div></div>
+
+        <br>
+
+        <div class="slideshow-container" id="event-slideshow4">
+            <div class="numbertext">1 / 2</div>
+            <img class="mySlides active" src="events/Honorary and Adjunct 1.jpg" alt="Event 1">
+            <div class="numbertext">2 / 2</div>
+            <img class="mySlides" src="events/Honorary and Adjunct.JPG" alt="Event 2">
+            <div class="numbertext">3 / 2</div>
+            <img class="mySlides" src="events/honorty.JPG" alt="event3">
+            
+          
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+          </div>
+          
+          <div class="dots-container">
+            <span class="dot" data-slideshow="event-slideshow4"></span> 
+            <span class="dot" data-slideshow="event-slideshow4"></span> 
+
+            <span class="dot" data-slideshow="event-slideshow4"></span> 
+          </div>
+           
+          </div>
+       
+        <div class="timeline-item">
+          <H3 data-en="Honorary and Adjunct Professors" data-ar="الأساتذة الشرفيين والمتعاقدين المتميزين">Honorary and Adjunct Professors</H3>
+          <P data-en="The School of Business at the University of Jordan Hosts Honorary and Adjunct Professors for Knowledge Exchange 
+          
+          The School of Business at the University of Jordan hosted seven distinguished honorary and adjunct professors as part of the First Honorary Professors Forum. Over five days, they engaged in meetings with faculty and students, delivering lectures and workshops on AI in education, hybrid work models, academic publishing, and advanced research methods.  
+          
+          The event emphasized international collaboration and academic excellence, aligning with the school’s strategic development goals. A team of student volunteers played a key role in organizing and managing the forum, ensuring its success under the supervision of Dr. Hazar Hammoud.  
+          
+          At the closing ceremony, the professors were honored for their contributions, reinforcing the school’s commitment to global engagement and knowledge exchange" data-ar="استضافت كلية الأعمال في الجامعة الأردنية سبعة من الأساتذة الشرفيين والمتعاقدين المتميزين في إطار المنتدى الأول للأساتذة الشرفيين. وعلى مدار خمسة أيام، شارك هؤلاء الأساتذة في اجتماعات مع أعضاء هيئة التدريس والطلاب، حيث قدموا محاضرات وورش عمل تناولت موضوعات مثل الذكاء الاصطناعي في التعليم، ونماذج العمل الهجينة، والنشر الأكاديمي، وطرق البحث المتقدمة.
+          
+          أكد الحدث على أهمية التعاون الدولي والتميز الأكاديمي، بما يتماشى مع أهداف التطوير الاستراتيجية للكلية. ولعب فريق من المتطوعين الطلاب دورًا رئيسيًا في تنظيم وإدارة المنتدى، مما ضمن نجاحه تحت إشراف الدكتورة هازر حمود.
+          
+          وفي حفل الختام، تم تكريم الأساتذة تقديرًا لمساهماتهم، مما عزز التزام الكلية بالتفاعل العالمي وتبادل المعرفة.">
+           
+            The School of Business at the University of Jordan Hosts Honorary and Adjunct Professors for Knowledge Exchange 
+            
+                The School of Business at the University of Jordan hosted seven distinguished honorary and adjunct professors as part of the First Honorary Professors Forum. Over five days, they engaged in meetings with faculty and students, delivering lectures and workshops on AI in education, hybrid work models, academic publishing, and advanced research methods.  
+                
+                The event emphasized international collaboration and academic excellence, aligning with the school’s strategic development goals. A team of student volunteers played a key role in organizing and managing the forum, ensuring its success under the supervision of Dr. Hazar Hammoud.  
+                
+                At the closing ceremony, the professors were honored for their contributions, reinforcing the school’s commitment to global engagement and knowledge exchange.</P>
+                
+   </div></div>
+
+   <br>
+
+    <div class="slideshow-container" id="event-slideshow5">
+        <div class="numbertext">1 / 2</div>
+        <img class="mySlides active" src="events/josdc1.JPG" alt="Event 1">
+        <div class="numbertext">2 / 2</div>
+        <img class="mySlides" src="events/josdc2.JPG" alt="Event 2">
+        <div class="numbertext">3 / 2</div>
+        <img class="mySlides" src="events/josdc3.JPG" alt="Event 2">
+     
+        
+        
+      
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+      </div>
+      
+      <div class="dots-container">
+        <span class="dot" data-slideshow="event-slideshow5"></span> 
+        <span class="dot" data-slideshow="event-slideshow5"></span> 
+        <span class="dot" data-slideshow="event-slideshow5"></span> 
+        
+      </div>
+       
+      </div>    <br>
+
+        <div class="timeline-item">
+          <H3 data-en="Jordan’s first Semiconductor Design Competition (JoSDC 2023)" data-ar="أول مسابقة لتصميم أشباه الموصلات في الأردن (JoSDC 2023)"> Jordan’s first Semiconductor Design Competition (JoSDC 2023)</H3>
+          <P data-en="Under the Patronage of His Royal Highness Crown Prince Hussein, Jordan’s first Semiconductor Design Competition (JoSDC 2023) was a resounding success, aligning with the nation’s Economic Modernization Vision - رؤية التحديث الاقتصادي.
+          
+          JoSDC fostered creativity and innovation, bringing together students, engineers, and innovators nationwide. The event was supported by Fifth Advisory Services (The Fifth), the Ministry of Digital Economy & Entrepreneurship, the Crown Prince Foundation, int@j, and dedicated volunteers, including the Faculty of Business volunteer team at the University of Jordan. This team played a key role in ensuring the seamless execution and coordination of the event, managing logistics, assisting participants, and enhancing the overall event experience.
+          
+          The top three teams were:
+          
+          • Ctrl Elite from Hashemite University  
+          • Teamlleh from the University of Jordan  
+          • Risin'23 from Princess Sumaya University for Technology"
+          
+          
+          data-ar="تحت رعاية سمو ولي العهد الأمير الحسين، نجاح باهر لأول مسابقة لتصميم أشباه الموصلات في الأردن (JoSDC 2023)
+          
+          حققت أول مسابقة لتصميم أشباه الموصلات في الأردن (JoSDC 2023) نجاحًا كبيرًا، متماشية مع رؤية التحديث الاقتصادي للمملكة.
+          
+          ساهمت المسابقة في تحفيز الإبداع والابتكار، وجمعت بين الطلاب والمهندسين والمبتكرين من جميع أنحاء الأردن. وحظيت بدعم كل من شركة Fifth Advisory Services (The Fifth)، ووزارة الاقتصاد الرقمي والريادة، ومؤسسة ولي العهد، وجمعية إنتاج (int@j)، إلى جانب المتطوعين الم dedicated، بمن فيهم فريق المتطوعين في كلية الأعمال بالجامعة الأردنية، الذي لعب دورًا محوريًا في ضمان التنفيذ السلس والتنسيق الفعّال للحدث، من خلال إدارة اللوجستيات، ومساعدة المشاركين، وتحسين تجربة الفعالية بشكل عام.
+          
+          الفرق الثلاثة الفائزة في المسابقة:
+          🥇 Ctrl Elite – الجامعة الهاشمية
+          🥈 Teamlleh – الجامعة الأردنية
+          🥉 Risin'23 – جامعة الأميرة سمية للتكنولوجيا"
+          
+         > Under the Patronage of His Royal Highness Crown Prince Hussein, Jordan’s first Semiconductor Design Competition (JoSDC 2023) was a resounding success, aligning with the nation’s Economic Modernization Vision - رؤية التحديث الاقتصادي.
+
+    JoSDC fostered creativity and innovation, bringing together students, engineers, and innovators nationwide. The event was supported by Fifth Advisory Services (The Fifth), the Ministry of Digital Economy & Entrepreneurship, the Crown Prince Foundation, int@j, and dedicated volunteers, including the Faculty of Business volunteer team at the University of Jordan. This team played a key role in ensuring the seamless execution and coordination of the event, managing logistics, assisting participants, and enhancing the overall event experience.
+    
+    The top three teams were:
+    
+    • Ctrl Elite from Hashemite University  
+    • Teamlleh from the University of Jordan  
+    • Risin'23 from Princess Sumaya University for Technology</p>
+    <br>
+    <br></div></div>
+    <br>
+
+
+    <div class="slideshow-container" id="event-slideshow6">
+        <div class="numbertext">1 / 2</div>
+        <img class="mySlides active" src="events/qatamen1.jpeg" alt="Event 1">
+        <div class="numbertext">2 / 2</div>
+        <img class="mySlides" src="events/qatameen 2.jpeg" alt="Event 2">
+        <div class="numbertext">3/ 2</div>
+        <img class="mySlides" src="events/qatameen3.jpeg" alt="Event 2">
+        <div class="numbertext">4/ 2</div>
+        <img class="mySlides" src="events/qatamen4.jpeg" alt="Event 2">
+        <div class="numbertext">5 / 2</div>
+        <img class="mySlides" src="events/qattameen.jpeg" alt="Event 2">
+        
+        
+        
+      
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+      </div>
+      
+      <div class="dots-container">
+        <span class="dot" data-slideshow="event-slideshow6"></span> 
+        <span class="dot" data-slideshow="event-slideshow6"></span> 
+        <span class="dot" data-slideshow="event-slideshow6"></span> 
+        <span class="dot" data-slideshow="event-slideshow6"></span> 
+        <span class="dot" data-slideshow="event-slideshow6"></span> 
+      </div>
+       
+      </div>
+        <div class="timeline-item">
+         <H3 data-en="the Digital Entrepreneurship Conference" data-ar="مؤتمر ريادة الأعمال الرقمية">the Digital Entrepreneurship Conference</H3>
+          <P data-en="usiness Volunteer Team (BVT) at the Digital Entrepreneurship Conference
+          
+          The Business Volunteer Team (BVT) played a key role in the success of the Digital Entrepreneurship Conference, featuring Dr. Maen Al Qatamin and top business leaders from the Middle East. Our team ensured seamless event coordination, managing logistics, speaker arrangements, and audience engagement.  
+          
+          Through our efforts, we facilitated a dynamic and insightful experience for attendees, reinforcing our commitment to supporting business innovation and entrepreneurship. This conference provided our team members with invaluable exposure to the latest trends in digital entrepreneurship, inspiring us to continue making a meaningful impact in the business community.  
+          
+          At BVT, we take pride in empowering young professionals through hands-on experience in organizing high-profile events, fostering leadership, teamwork, and strategic thinking." 
+          data-ar="فريق المتطوعين في مجال الأعمال (BVT) في مؤتمر ريادة الأعمال الرقمية
+          
+          لعب فريق المتطوعين في مجال الأعمال (BVT) دورًا محوريًا في إنجاح مؤتمر ريادة الأعمال الرقمية، الذي استضاف الدكتور معن القطامين إلى جانب نخبة من قادة الأعمال في الشرق الأوسط. عمل فريقنا على تنسيق الحدث بسلاسة، من خلال إدارة اللوجستيات، وترتيب المتحدثين، والتفاعل مع الجمهور.
+          
+          من خلال جهودنا، ساهمنا في تقديم تجربة ديناميكية وغنية بالمعلومات للحضور، مما يعزز التزامنا بدعم الابتكار وريادة الأعمال في قطاع الأعمال. كما أتاح لنا هذا المؤتمر فرصة التعرف على أحدث الاتجاهات في ريادة الأعمال الرقمية، وألهمنا لمواصلة إحداث تأثير إيجابي في مجتمع الأعمال.
+          
+          في BVT، نفخر بتمكين الشباب المهنيين من خلال التجربة العملية في تنظيم الفعاليات الكبرى، وتعزيز مهارات القيادة، والعمل الجماعي، والتفكير الاستراتيجي.">
+          
+          
+Business Volunteer Team (BVT) at the Digital Entrepreneurship Conference
+
+    The Business Volunteer Team (BVT) played a key role in the success of the Digital Entrepreneurship Conference, featuring Dr. Maen Al Qatamin and top business leaders from the Middle East. Our team ensured seamless event coordination, managing logistics, speaker arrangements, and audience engagement.  
+    
+    Through our efforts, we facilitated a dynamic and insightful experience for attendees, reinforcing our commitment to supporting business innovation and entrepreneurship. This conference provided our team members with invaluable exposure to the latest trends in digital entrepreneurship, inspiring us to continue making a meaningful impact in the business community.  
+    
+    At BVT, we take pride in empowering young professionals through hands-on experience in organizing high-profile events, fostering leadership, teamwork, and strategic thinking.
+</p>   </div></div>     <br>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/BVT.JU" class="icon"><img src="facebook-new.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/bvt_ju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="icon"><img src="icons8-instagram-50.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/bvt-ju/posts/?feedView=all" class="icon"><img src="linkedin-ICON.webp" alt="LinkedIn"></a>
+    </div>
+    <p data-ar="© 2025 فريق التطوع للأعمال - جميع الحقوق محفوظة." data-en="&copy; 2025 Business Volunteer Team - All Rights Reserved">&copy; 2025 Business Volunteer Team - All Rights Reserved</p>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function initSlideshow(slideshowId) {
+            let slideshow = document.getElementById(slideshowId);
+            let slides = slideshow.getElementsByClassName("mySlides");
+            let dots = document.querySelectorAll(`.dot[data-slideshow="${slideshowId}"]`);
+            let prev = slideshow.querySelector(".prev");
+            let next = slideshow.querySelector(".next");
+    
+            let slideIndex = 0;
+            let autoSlideInterval;
+    
+            function showSlide(index) {
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (let i = 0; i < dots.length; i++) {
+                    dots[i].classList.remove("active-dot");
+                }
+                slides[index].style.display = "block";
+                dots[index].classList.add("active-dot");
+            }
+    
+            function nextSlide() {
+                slideIndex = (slideIndex + 1) % slides.length;
+                showSlide(slideIndex);
+            }
+    
+            function prevSlide() {
+                slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+                showSlide(slideIndex);
+            }
+    
+            function startAutoSlide() {
+                stopAutoSlide(); 
+                autoSlideInterval = setInterval(nextSlide, 4000);
+            }
+    
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+    
+            // تشغيل السلايدر تلقائيًا
+            startAutoSlide();
+    
+            if (prev) prev.addEventListener("click", function () {
+                prevSlide();
+                startAutoSlide(); // إعادة ضبط التايمر
+            });
+    
+            if (next) next.addEventListener("click", function () {
+                nextSlide();
+                startAutoSlide(); // إعادة ضبط التايمر
+            });
+    
+            dots.forEach((dot, i) => {
+                dot.addEventListener("click", function () {
+                    slideIndex = i;
+                    showSlide(slideIndex);
+                    startAutoSlide(); // إعادة ضبط التايمر
+                });
+            });
+    
+            showSlide(slideIndex);
+        }
+    
+        let slideshows = document.querySelectorAll(".slideshow-container");
+        slideshows.forEach((slideshow) => {
+            initSlideshow(slideshow.id);
+        });
+    });
+   
+document.getElementById("language-selector").addEventListener("change", function() {
+  var lang = this.value; // تحديد اللغة المختارة
+  var elements = document.querySelectorAll("[data-en], [data-ar]"); // تحديد جميع العناصر التي تحتوي على نصوص
+
+  elements.forEach(function(element) {
+      // تغيير النص بناءً على اللغة المختارة
+      if (lang === "ar") {
+          element.innerText = element.getAttribute("data-ar");
+      } else {
+          element.innerText = element.getAttribute("data-en");
+      }
+  });
+});
+
+
+    </script>
+    
+</body>
+</html>

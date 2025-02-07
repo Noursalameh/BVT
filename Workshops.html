@@ -1,0 +1,776 @@
+<html>
+  <head> <title>BVT - Workshops</title>
+    <link rel="icon" href="bvt logo.png" type="image/x-icon">
+   
+    
+<head>
+<style>
+  nav {
+        background-color:#cc4202; /* Orange color */
+        padding: 20px 50px; /* رجعت الحجم القديم */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .logo { flex: 0 0 auto; }
+    .logo img {
+        height: 40px;
+        width: auto;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; 
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 50%; 
+        transform: translateX(-50%); 
+        gap: 20px;
+    }
+
+    nav ul li { margin: 0; }
+
+    nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px; 
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+
+    nav ul li a:hover {
+        color: #4b4955;
+    }
+
+    #about {
+        background-image: url(1.png);
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        background-color: white;
+        padding: 50px;
+        border-radius: 10px;
+        transition: background-color 0.5s ease, transform 0.5s ease;
+        flex-direction: column; /* ترتيب العناصر عموديًا */
+        justify-content: center; /* توسيط عموديًا */
+        height: 100vh; /* جعل القسم يأخذ ارتفاع النافذة */
+        text-align: center;
+    }
+
+      
+    body {
+    font-family: 'Cairo', sans-serif;
+   
+}
+nav {
+  background-color:#cc4202;/* #2C3E50;/*#531803; /* Orange co lor */
+  padding: 10px 30px; 
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+}
+.logo{flex: 0 0  auto;}
+.logo img{
+  height: 40px;
+  width: auto;
+}
+
+nav ul {
+  
+  list-style: none;
+  padding: 0;
+  margin: 0; 
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%); 
+  gap: 20px;
+  
+}
+
+nav ul li {
+  margin: 0 ;
+  
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #4b4955;
+}
+    #about {
+    background-image: url(1.png);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    display: flex;
+  flex-direction: column; /* ترتيب العناصر عموديًا */
+  
+  justify-content: center; /* توسيط عموديًا */
+  
+  text-align: center;
+  }
+  .social-icons {
+    position: relative;
+    bottom: 0; 
+  left: 0;
+  margin: 10px; 
+  z-index: 1000;
+  gap: 15px;}
+
+.social-icons a img {
+  height: 30px;
+  width:30px;
+  /*filter:brightness() invert(1); */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1); 
+}.language-switch {
+    margin-left: auto;
+    margin-top: 10px;
+    padding: 6px 15px;
+    border-radius: 3px;
+    border: none;
+    background: linear-gradient(45deg, #ff6600, #ff9900);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em; /* تقليل الحجم */
+}
+
+.language-switch:hover {
+  background: linear-gradient(45deg, #ff9900, #ff6600);
+}
+
+
+body{
+  background-image: url(1.png)
+}
+  h2{
+    font-size: xx-large;
+    text-align: center;
+    color:#cc4202;
+  }
+  h4{
+    font-size: large;
+    text-align: center;
+    color:#cc4202;
+  }
+  div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 245px; /* العرض */
+  height: 500px; /* تحديد ارتفاع ثابت */
+  box-sizing: border-box; /* لضمان أن الهوامش والحشوات لا تؤثر على الحجم الكلي */
+}
+
+div.gallery:hover {
+  border: 1px solid #cc4202;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 200px; /* تحديد ارتفاع ثابت للصورة داخل البوكس */
+  object-fit: cover; /* لضبط الصورة بشكل مناسب داخل البوكس */
+  margin-bottom: 5px; /* تقليل المسافة بين الصورة والوصف */
+}
+
+div.desc {
+  padding: 10px; /* تقليل padding لجعل المساحة أصغر */
+  text-align: center;
+  color: #cc4202;
+  height: 30px; /* يمكن تعديل الارتفاع هنا إذا لزم الأمر */
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #cc4202;
+  size: large;
+}
+div.desc:hover {
+  transform: translateY(-10px); /* تحريك النص عند التمرير */
+    color: #ff4500;
+  }
+
+
+  * {box-sizing: border-box;}
+body { font-family: 'Cairo', sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color:#717171 ;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+ 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.text-box {
+  background-color: #fff(0, 0, 0, 0.6); 
+  color: #cc4202;
+  padding: 10px; 
+  text-align: center; 
+  font-size: 16px; 
+  border-radius: 5px; 
+  margin: 10px auto; 
+  max-width: 80%; 
+  border: 2px solid #cc4202 ; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.text-box:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+
+}
+/* Footer Styles */
+footer {
+  background-color:#cc4202;
+color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.language-switch {
+    margin-left: auto;
+    margin-top: 10px;
+    padding: 6px 15px;
+    border-radius: 3px;
+    border: none;
+    background: linear-gradient(45deg, #ff6600, #ff9900);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em; /* تقليل الحجم */
+}
+
+.language-switch:hover {
+  background: linear-gradient(45deg, #ff9900, #ff6600);
+}
+
+  
+</style>
+</head>
+<body>
+  <nav>
+   
+    <div class="logo" ><img src="logo.png" alt="bvt logo" height="30pt" width="30pt"></div> 
+    <ul>
+      <li><a href="index2.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+      <li><a href="about.html" data-en="About Us" data-ar="معلومات عنا">About Us</a></li>
+      <li><a href="events.html" data-en="Events" data-ar="الفعاليات">Events</a></li>
+      <li><a href="Workshops.html" data-en="Workshops" data-ar="ورش العمل">Workshops</a></li>
+      <li><a href="index2.html#team-leaders" data-en="Team Leaders" data-ar="قادة الفريق">Team Leaders</a></li>
+  </ul>
+
+  <div class="social-icons">
+      <a href="https://www.facebook.com/BVT.JU" class="icon"><img src="facebook-new.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/bvt_ju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="icon"><img src="icons8-instagram-50.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/company/bvt-ju/posts/?feedView=all" class="icon"><img src="linkedin-ICON.webp" alt="LinkedIn"></a>
+  </div>
+  
+  <select id="language-selector" class="language-switch">
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+  </select>
+</nav>
+<h2 data-en="Workshops" data-ar="ورشات عمل">Workshops</h2>
+
+<h4 data-en="Discover interactive workshops designed to enhance your skills and knowledge with hands-on learning and expert guidance. Join us to grow and achieve more!" data-ar="اكتشف ورش عمل تفاعلية مصممة لتعزيز مهاراتك ومعرفتك من خلال التعلم العملي والتوجيه المتخصص. انضم إلينا لتنمو وتحقق المزيد!">
+
+
+Discover interactive workshops designed to enhance your skills and knowledge with hands-on learning and expert guidance. Join us to grow and achieve more!</h4>
+
+<div class="slideshow-container" id="workshop-slideshow1">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="workshop/Loiyy 6.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="workshop/Loiy w5.JPG" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="workshop/Loiy w2.JPG" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="workshop/loiy w7.JPG" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="workshop/Loiy w1.JPG" style="width:100%">
+  
+  </div>
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" data-slideshow="workshop-slideshow1"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow1"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow1"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow1"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow1"></span> 
+</div>
+<div class="text-box" data-en="BVT boot camp day 1 / LinkedIn workshop ... led by the knowledgeable Loiy Althaher aimed at empowering our team to enhance our presence on the platform.
+
+  Throughout the workshop, we were equipped with strategies that refined our accounts and gave the team valuable professional skills. It's about more than just acquiring knowledge; it's about positioning ourselves for exciting career opportunities. 
+  
+  What made this workshop truly exceptional was its hands-on approach. We didn't just observe; we actively collaborated on tasks together. This fusion of theory and practice significantly accelerates our progress toward achieving our goals.
+  
+  Thank you to Loiy Althaher for generously sharing his expertise and guiding the team towards LinkedIn success!"
+  
+  data-ar="اليوم الأول / ورشة اللينكدان 
+
+  قدم الخبير لؤي الطاهر ورشة عمل مميزة تهدف إلى تمكين فريقنا من تعزيز وجوده على منصة لينكدإن بطريقة احترافية.
+  
+  خلال الورشة، اكتسبنا استراتيجيات فعالة ساعدتنا على تحسين حساباتنا وتطوير مهاراتنا المهنية، حيث لم يكن الهدف مجرد اكتساب المعرفة، بل أيضًا تعزيز فرصنا في سوق العمل وفتح آفاق جديدة لمستقبلنا المهني.
+  
+  ما جعل هذه الورشة استثنائية هو نهجها العملي، حيث لم نكتفِ بالمشاهدة، بل عملنا معًا على تنفيذ المهام بشكل تفاعلي. هذا الدمج بين النظرية والتطبيق ساهم بشكل كبير في تسريع تقدمنا نحو تحقيق أهدافنا.
+  
+  شكرًا جزيلًا لؤي الطاهر على مشاركته القيمة لخبراته وإرشاده لفريقنا نحو النجاح على لينكدإن! 🚀"
+  
+  > <strong> BVT boot camp day 1 / LinkedIn workshop </strong> <br> led by the knowledgeable Loiy Althaher aimed at empowering our team to enhance our presence on the platform.
+
+  Throughout the workshop, we were equipped with strategies that refined our accounts and gave the team valuable professional skills. It's about more than just acquiring knowledge; it's about positioning ourselves for exciting career opportunities. 
+  
+  What made this workshop truly exceptional was its hands-on approach. We didn't just observe; we actively collaborated on tasks together. This fusion of theory and practice significantly accelerates our progress toward achieving our goals.
+  
+  Thank you to Loiy Althaher for generously sharing his expertise and guiding the team towards LinkedIn success!</div>
+
+
+
+<div class="slideshow-container" id="workshop-slideshow2">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="workshop/org w1.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="workshop/org w2.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="workshop/org w3.jpg" style="width:100%">
+  </div>
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" data-slideshow="workshop-slideshow2"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow2"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow2"></span> 
+
+</div>
+<div class="text-box" data-en="BVT Bootcamp Day 2 / Team Camp .. It was full of energy and learning! Each team had its workshop to understand its tasks and roles better. ⭐ 
+
+  From photography to organization, designers to social media, each team gained deeper insights into their responsibilities, ensuring Team BVT's path to success is well-charted and vibrant." 
+  
+  data-ar="اليوم الثاني / يوم الأفرقة
+  كان مليئًا بالطاقة والتعلم! حيث خضعت كل فرقة لورشة عمل لفهم مهامها وأدوارها بشكل أفضل. ⭐
+  
+  من التصوير الفوتوغرافي إلى التنظيم، ومن التصميم إلى إدارة وسائل التواصل الاجتماعي، اكتسبت كل فرقة رؤى أعمق حول مسؤولياتها، مما يضمن أن طريق فريق  لفريق تطوع الأعمال نحو النجاح سيكون مخططًا له بشكل جيد ومليئًا بالحيوية.">
+<strong>BVT Bootcamp Day 2 / Team Camp </strong> <br> It was full of energy and learning! Each team had its workshop to understand its tasks and roles better. ⭐ 
+
+  From photography to organization, designers to social media, each team gained deeper insights into their responsibilities, ensuring Team BVT's path to success is well-charted and vibrant.</div>
+
+
+<div class="slideshow-container" id="workshop-slideshow3">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="workshop/saleh w0.jpeg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="workshop/saleh w1.JPG" style="width:100%">
+  </div>
+  
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="workshop/saleh w4.JPG" style="width:100%">
+  </div>
+  
+  
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="workshop/saleh w7.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 4</div>
+    <img src="workshop/saleh w2.JPG" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 4</div>
+    <img src="workshop/saleh w3.JPG" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 4</div>
+    <img src="workshop/saleh w5.JPG" style="width:100%">
+  </div>
+  
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+  
+  
+</div>
+<br>
+<div style="text-align:center">
+ 
+  <span class="dot" data-slideshow="workshop-slideshow3"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow3"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow3"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow3"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow3"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow3"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow3"></span> 
+  
+  
+</div>
+<div class="text-box" data-en="BVT Bootcamp Day 3 / Team Building ... led by the exceptionally talented Saleh Al-Hanash صالح الحنش 
+  This session was a game-changer, focusing on enhancing our team collaboration, socialization, and synergy.
+  
+  Saleh's expertise illuminated our path toward fostering a cohesive and high-performing team environment. Their interactive approach ensured every team member was engaged, fostering open dialogue and active participation.
+  
+  Through thought-provoking discussions and engaging activities, Saleh imparted invaluable insights and practical strategies that we are excited to implement not only in our professional endeavors but also in our social lives."
+  
+  data-ar="اليوم الثالث / بناء الأفرقة 
+
+  بقيادة المبدع صالح الحنش، كانت هذه الجلسة نقطة تحول حقيقية، حيث ركزت على تعزيز التعاون، والتواصل الاجتماعي، والانسجام بين أعضاء الفريق.
+  
+  بخبرته الواسعة، أضاء صالح طريقنا نحو بناء بيئة فريق متماسكة وذات أداء عالٍ. أسلوبه التفاعلي جعل كل عضو في الفريق مشاركًا بشكل فعّال، مما عزز الحوار المفتوح والمشاركة النشطة.
+  
+  من خلال مناقشات محفزة للذهن وأنشطة تفاعلية ممتعة، قدّم لنا صالح رؤى قيّمة واستراتيجيات عملية نحن متحمسون لتطبيقها ليس فقط في حياتنا المهنية، ولكن أيضًا في تفاعلاتنا الاجتماعية. 🚀">
+
+
+
+<strong> Bootcamp Day 3 / Team Building </strong> <br> led by the exceptionally talented Saleh Al-Hanash صالح الحنش 
+  This session was a game-changer, focusing on enhancing our team collaboration, socialization, and synergy.
+  
+  Saleh's expertise illuminated our path toward fostering a cohesive and high-performing team environment. Their interactive approach ensured every team member was engaged, fostering open dialogue and active participation.
+  
+  Through thought-provoking discussions and engaging activities, Saleh imparted invaluable insights and practical strategies that we are excited to implement not only in our professional endeavors but also in our social lives.</div>
+
+
+
+
+<div class="slideshow-container" id="workshop-slideshow4">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="omarrw5.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="workshop/omar w6.jpg" style="width:100%">
+  </div>
+ 
+  <div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="workshop/omar w8.jpeg" style="width:100%">   
+</div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4/ 5</div>
+    <img src="workshop/omar w12.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="workshop/omar w10.jpeg" style="width:100%">
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 5</div>
+    <img src="workshop/omar w11.jpeg" style="width:100%">
+  </div>
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot" data-slideshow="workshop-slideshow4"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow4"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow4"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow4"></span>
+  <span class="dot" data-slideshow="workshop-slideshow5"></span>
+  <span class="dot" data-slideshow="workshop-slideshow5"></span>
+</div>
+<div class="text-box" data-en="BVT Bootcamp Day 4 / Toust Masterour team ... was privileged to participate in a session led by Omar Alhijazi focusing on Critical Thinking and Public Speaking skills. Mr. Omar's guidance was invaluable as he conducted practical activities to enhance personal presence, foster development, and boost communication confidence.
+
+  Moreover, participants had the opportunity to engage in simulated scenarios, preparing them to navigate various personal and professional challenges with ease. These simulations provided insights into effective responses and strategies for handling different situations.
+  
+  Furthermore, Mr. Omar emphasized the importance of empathetic thinking, encouraging us to consider perspectives from the viewpoint of others. This valuable lesson not only enhances our communication skills but also fosters understanding and empathy within our team and beyond." 
+  data-ar="اليوم الرابع / فن الخطابة والتحدث أمام الجمهور 
+
+  كان لفريقنا الشرف بالمشاركة في جلسة قادها عمر الحجازي، والتي ركزت على مهارات التفكير النقدي وفن الخطابة العامة. كانت إرشادات السيد عمر لا تقدر بثمن، حيث قام بتنفيذ أنشطة عملية لتعزيز الحضور الشخصي، وتطوير المهارات، وزيادة الثقة في التواصل.
+  
+  كما أُتيحت للمشاركين الفرصة للمشاركة في سيناريوهات محاكاة، مما ساعدهم على الاستعداد لمواجهة التحديات الشخصية والمهنية بسهولة. قدمت هذه المحاكاة رؤى قيمة حول كيفية التعامل بفعالية مع مختلف المواقف وتطوير استراتيجيات استجابة ناجحة.
+  
+  علاوة على ذلك، أكد السيد عمر على أهمية التفكير المتعاطف، مشجعًا إياها على النظر إلى المواقف من منظور الآخرين. هذه الدروس الثمينة لا تعزز مهاراتنا في التواصل فحسب، بل أيضًا تعزز الفهم والتعاطف داخل فريقنا وخارجه."> 
+<strong> BVT Bootcamp Day 4 / Toust Master </strong> <br>our team was privileged to participate in a session led by Omar Alhijazi focusing on Critical Thinking and Public Speaking skills. Mr. Omar's guidance was invaluable as he conducted practical activities to enhance personal presence, foster development, and boost communication confidence.
+
+  Moreover, participants had the opportunity to engage in simulated scenarios, preparing them to navigate various personal and professional challenges with ease. These simulations provided insights into effective responses and strategies for handling different situations.
+  
+  Furthermore, Mr. Omar emphasized the importance of empathetic thinking, encouraging us to consider perspectives from the viewpoint of others. This valuable lesson not only enhances our communication skills but also fosters understanding and empathy within our team and beyond. </div>
+
+<div class="slideshow-container" id="workshop-slideshow5">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="workshop/hazar 2.JPG" style="width:100%;height: 100%;">
+  </div>
+  
+  
+  
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="workshop/hazar w2.JPG" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="workshop/hazar w3.jpg" style="width:100%">
+  </div>
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+  
+  <span class="dot" data-slideshow="workshop-slideshow5"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow5"></span> 
+  <span class="dot" data-slideshow="workshop-slideshow5"></span>
+</div>
+<div class="text-box" data-en="BVT Bootcamp last day / Planning for sustainable development activities ...  we embarked on a journey led by Dr. Hazar Hmoud that focused on planning sustainable development activities, particularly in the context of our workshops and their integration with development goals.
+  
+  Dr. Hazar’s guidance was instrumental as we delved into the intricate process of aligning our workshop agendas with broader development objectives. Through her expert facilitation and detailed explanations, we better understood how our efforts can contribute to larger societal goals.
+  
+  The workshop provided practical strategies and frameworks for designing workshops that impart knowledge and drive progress toward sustainable development. It emphasized the importance of integrating economic, social, and environmental considerations into our planning process, ensuring a comprehensive approach to our initiatives.
+  
+  We are immensely grateful to Dr. Hazar for her invaluable insights and inspiration, which have equipped us with the tools and motivation to forge ahead towards a more sustainable and developed future.
+  
+  Stay tuned as we apply these learnings to our workshop planning endeavors, contributing to positive change one step at a time!" 
+  
+  data-ar="اليوم الأخير من تدريبات / التخطيط لأنشطة التنمية المستدامة
+
+  بدأنا رحلة جديدة بقيادة الدكتورة هازار حمود التي ركزت على التخطيط لأنشطة التنمية المستدامة، لا سيما في سياق ورش العمل لدينا ودمجها مع أهداف التنمية.
+  
+  كانت توجيهات الدكتورة هازار ذات أهمية بالغة بينما تعمقنا في عملية تنسيق جداول ورش العمل مع الأهداف التنموية الأوسع. من خلال تسهيلها الخبير وشرحها المفصل، أصبحنا نفهم بشكل أفضل كيف يمكن لجهودنا أن تساهم في الأهداف المجتمعية الكبرى.
+  
+  قدمت ورشة العمل استراتيجيات عملية وأطرًا لتصميم ورش العمل التي تنقل المعرفة وتدفع نحو التقدم نحو التنمية المستدامة. كما أكدت على أهمية دمج الاعتبارات الاقتصادية والاجتماعية والبيئية في عملية التخطيط، لضمان اتباع نهج شامل في مبادراتنا.
+  
+  نحن ممتنون للغاية للدكتورة هازار على رؤاها القيمة وإلهامها، التي زودتنا بالأدوات والدوافع للتقدم نحو مستقبل أكثر استدامة وتطورًا.
+  
+  تابعونا بينما نطبق هذه الدروس في جهودنا التخطيطية للورش، مساهمين في التغيير الإيجابي خطوة بخطوة!">
+<strong>Bootcamp last day / Planning for sustainable development activities </strong> <br>
+
+  we embarked on a journey led by Dr. Hazar Hmoud that focused on planning sustainable development activities, particularly in the context of our workshops and their integration with development goals.
+  
+  Dr. Hazar’s guidance was instrumental as we delved into the intricate process of aligning our workshop agendas with broader development objectives. Through her expert facilitation and detailed explanations, we better understood how our efforts can contribute to larger societal goals.
+  
+  The workshop provided practical strategies and frameworks for designing workshops that impart knowledge and drive progress toward sustainable development. It emphasized the importance of integrating economic, social, and environmental considerations into our planning process, ensuring a comprehensive approach to our initiatives.
+  
+  We are immensely grateful to Dr. Hazar for her invaluable insights and inspiration, which have equipped us with the tools and motivation to forge ahead towards a more sustainable and developed future.
+  
+  Stay tuned as we apply these learnings to our workshop planning endeavors, contributing to positive change one step at a time! </div>
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/BVT.JU" class="icon"><img src="facebook-new.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/bvt_ju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="icon"><img src="icons8-instagram-50.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/bvt-ju/posts/?feedView=all" class="icon"><img src="linkedin-ICON.webp" alt="LinkedIn"></a>
+    </div>
+    <p data-ar="© 2025 فريق التطوع للأعمال - جميع الحقوق محفوظة." data-en="&copy; 2025 Business Volunteer Team - All Rights Reserved">&copy; 2025 Business Volunteer Team - All Rights Reserved</p>
+</footer>
+<script>
+  function initSlideshow(slideshowId) {
+    let slideIndex = 0;
+    const slideshowContainer = document.getElementById(slideshowId);
+    if (!slideshowContainer) return; 
+
+    const slides = slideshowContainer.querySelectorAll(".mySlides");
+    const dots = document.querySelectorAll(`.dot[data-slideshow="${slideshowId}"]`);
+    const prevButton = slideshowContainer.querySelector(".prev");
+    const nextButton = slideshowContainer.querySelector(".next");
+
+    function showSlides() {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === slideIndex ? "block" : "none";
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === slideIndex);
+      });
+    }
+
+    function changeSlide(n) {
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      showSlides();
+      resetAutoSlide();
+    }
+
+    function autoSlide() {
+      slideIndex = (slideIndex + 1) % slides.length;
+      showSlides();
+    }
+
+    let autoSlideInterval = setInterval(autoSlide, 3000);
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(autoSlide, 3000);
+    }
+
+    if (prevButton) prevButton.addEventListener("click", () => changeSlide(-1));
+    if (nextButton) nextButton.addEventListener("click", () => changeSlide(1));
+
+    showSlides();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    initSlideshow("workshop-slideshow1");
+    initSlideshow("workshop-slideshow2");
+    initSlideshow("workshop-slideshow3");
+    initSlideshow("workshop-slideshow4");
+    initSlideshow("workshop-slideshow5");
+  });
+ document.getElementById("language-selector").addEventListener("change", function() {
+  var lang = this.value; // تحديد اللغة المختارة
+  var elements = document.querySelectorAll("[data-en], [data-ar]"); // تحديد جميع العناصر التي تحتوي على نصوص
+
+  elements.forEach(function(element) {
+      // تغيير النص بناءً على اللغة المختارة
+      if (lang === "ar") {
+          element.innerText = element.getAttribute("data-ar");
+      } else {
+          element.innerText = element.getAttribute("data-en");
+      }
+  });
+});
+  </script>

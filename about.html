@@ -1,0 +1,416 @@
+<head> <title>BVT - About</title>
+    <link rel="icon" href="bvt logo.png" type="image/x-icon">
+    
+    
+    <style>
+    
+     
+    body {
+    font-family: 'Cairo', sans-serif;
+   
+}
+nav {
+  background-color:#cc4202;/* #2C3E50;/*#531803; /* Orange co lor */
+  padding: 10px 30px; 
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+}
+.logo{flex: 0 0  auto;}
+.logo img{
+  height: 40px;
+  width: auto;
+}
+
+nav ul {
+  
+  list-style: none;
+  padding: 0;
+  margin: 0; 
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%); 
+  gap: 20px;
+  
+}
+
+nav ul li {
+  margin: 0 ;
+  
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #4b4955;
+}
+    #about {
+    background-image: url(1.png);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    display: flex;
+  flex-direction: column; /* ترتيب العناصر عموديًا */
+  
+  justify-content: center; /* توسيط عموديًا */
+  
+  text-align: center;
+  }
+  .social-icons {
+    position: relative;
+    bottom: 0; 
+  left: 0;
+  margin: 10px; 
+  z-index: 1000;
+  gap: 15px;}
+
+.social-icons a img {
+  height: 30px;
+  width:30px;
+  /*filter:brightness() invert(1); */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1); 
+}
+  #about:hover {
+    background-color: rgba(255, 165, 0, 0.2); /* لون برتقالي خفيف عند التمرير */
+    transform: scale(1.02); /* تكبير خفيف للصندوق */
+  }
+  
+  .about-imge {
+    flex: 1;
+  }
+  
+  .about-imge img {
+  max-width: 600px;
+  width: 100%; /* تجعل الصورة مرنة */
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* انتقال سلس */
+}
+
+.about-imge img:hover {
+  transform: scale(1.1); /* تكبير الصورة بنسبة 15% */
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); /* إضافة ظل */
+}
+
+  
+  .ab-title {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-align: center;
+    background: linear-gradient(to right, #cc4202, #ff4500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 3s infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  #about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #cc4202;
+  }
+  
+  #about p:hover {
+    transform: translateY(-10px); /* تحريك النص عند التمرير */
+    color: #ff4500; /* تغيير لون النص عند التمرير */
+  }
+  
+  .Missionn { 
+ 
+    font-size: 1.5rem;
+    color:#cc4202;
+    position: relative;
+    display: flex;
+    transition: color 0.3s ease;
+    background-color: #e5e0cf; 
+        width: 80%; 
+    
+  }
+ .mission-s {
+  background-image:url(5.png); 
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر عموديًا */
+  align-items: center; /* توسيط أفقياً */
+  justify-content: center; /* توسيط عموديًا */
+  height: 100vh; /* جعل القسم يأخذ ارتفاع النافذة */
+  text-align: center; /* توسيط النصوص داخل العناصر */
+}
+  .mi{ 
+    font-size: 2.5em;
+    color: #cc4202;
+    margin-bottom: 10px;
+    text-align: center;
+  } 
+ 
+  
+  
+  .Missionn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background:#cc4202;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .Missionn:hover {
+    color:#cc4202;
+  }
+  
+  .Missionn:hover::after {
+    width: 100%;
+  } 
+  .Missionn { 
+
+  font-size: 1.5rem;
+  color: #cc4202; /* اللون الأساسي */
+  position: relative;
+  display: inline-block;
+  
+  background-color: #fffdfd;
+  
+  text-align: center;
+  transition: color 0.3s ease, transform 0.3s ease; /* تأثيرات الانتقال */
+}
+
+.Missionn:hover {
+  color: #ff4500; /* اللون الجديد عند التمرير */
+  transform: scale(1.05); /* تكبير النص قليلاً عند التمرير */
+  box-shadow: 0 0 15px rgba(255, 127, 80, 0.8); /* إضافة ظل */
+}
+
+  #Goals {
+    background-image: url(1.png);
+ 
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+
+.goals-ph img {
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.goals-ph img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.goals-text {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.goals-title {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  text-align: center;
+  background: linear-gradient(to right, #cc4202, #ff4500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 3s infinite;
+}
+
+.Goals1 {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #cc4202;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.Goals1:hover {
+  transform: translateY(-10px);
+  color: #ff4500;
+}
+
+ 
+
+
+
+
+
+.language-switch {
+    margin-left: auto;
+    margin-top: 10px;
+    padding: 6px 15px;
+    border-radius: 3px;
+    border: none;
+    background: linear-gradient(45deg, #ff6600, #ff9900);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em; /* تقليل الحجم */
+}
+
+.language-switch:hover {
+  background: linear-gradient(45deg, #ff9900, #ff6600);
+}
+
+footer {
+  background-color:#cc4202;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  clear: both;
+}
+
+
+  </style></head>
+  <nav>
+      <div class="logo"><img src="logo.png" alt="bvt logo" height="30pt" width="30pt"></div>
+      <ul>
+          <li><a href="index2.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+          <li><a href="about.html" data-en="About Us" data-ar="معلومات عنا">About Us</a></li>
+          <li><a href="events.html" data-en="Events" data-ar="الفعاليات">Events</a></li>
+          <li><a href="Workshops.html" data-en="Workshops" data-ar="ورش العمل">Workshops</a></li>
+          <li><a href="index2.html#team-leaders" data-en="Team Leaders" data-ar="قادة الفريق">Team Leaders</a></li>
+      </ul>
+  
+      <div class="social-icons">
+          <a href="https://www.facebook.com/BVT.JU" class="icon"><img src="facebook-new.png" alt="Facebook"></a>
+          <a href="https://www.instagram.com/bvt_ju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="icon"><img src="icons8-instagram-50.png" alt="Instagram"></a>
+          <a href="https://www.linkedin.com/company/bvt-ju/posts/?feedView=all" class="icon"><img src="linkedin-ICON.webp" alt="LinkedIn"></a>
+      </div>
+      
+      <select id="language-selector" class="language-switch">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+      </select>
+  </nav>
+  
+</header>
+
+<section id="about">
+    <div class="about-imge">
+      <img src="events/ibde.jpeg" alt="About Us" class="ibde">
+    </div>
+    <div class="about-text">
+      <h2 class="ab-title" data-en="About Us" data-ar="من نحن">About Us</h2>
+             <hr style="border: 0; width: 20%; height: 2px; background: linear-gradient(to right, #ff6600, #cc4202); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+             <p data-en="        We are students from the University of Jordan, representing the School of Business since 2021. Our mission is to empower students by organizing impactful conferences and workshops. Through our bootcamps, we help students develop essential soft skills, preparing them to excel in the job market. By actively participating in conferences and events, we create opportunities for growth, learning, and networking, ensuring our members are well-equipped for future challenges.
+             " 
+             data-ar="نحن طلاب من الجامعة الأردنية، نمثل كلية الأعمال منذ عام 2021. تتمثل رسالتنا في تمكين الطلاب من خلال تنظيم مؤتمرات وورش عمل مؤثرة. من خلال برامجنا التدريبية، نساعد الطلاب على تطوير المهارات الشخصية الأساسية، مما يؤهلهم للنجاح في سوق العمل. كما نوفر فرصًا للنمو والتعلم وبناء العلاقات المهنية من خلال المشاركة الفعالة في المؤتمرات والفعاليات، مما يضمن تجهيز أعضائنا لمواجهة تحديات المستقبل بثقة وكفاءة."> <strong>       We are students from the University of Jordan, representing the School of Business since 2021. Our mission is to empower students by organizing impactful conferences and workshops. Through our bootcamps, we help students develop essential soft skills, preparing them to excel in the job market. By actively participating in conferences and events, we create opportunities for growth, learning, and networking, ensuring our members are well-equipped for future challenges.
+         </strong>   </p>
+      
+    </div>
+  </section>
+  <section class="mission-s" >
+    <h2 class="mi" data-en="Mission" data-ar="رسالتنا">Mission</h2>
+    <p class="Missionn" data-en="Volunteerism and Awareness: We aim to inspire students to actively participate in volunteer activities while raising awareness about social issues. Through campaigns, events, and conferences, we promote a culture of giving back and collective action to address societal challenges." 
+     data-ar="التطوع والتوعية : نسعى لإلهام الطلاب للمشاركة الفعالة في الأنشطة التطوعية وتعزيز الوعي بالقضايا المجتمعية. من خلال الحملات والفعاليات والمؤتمرات، نعمل على تعزيز ثقافة العطاء والعمل الجماعي لمواجهة التحديات المجتمعية.">
+    <strong> Volunteerism and Awareness:</strong><br> We aim to inspire students to actively participate in volunteer activities while raising awareness about social issues. Through campaigns, events, and conferences, we promote a culture of giving back and collective action to address societal challenges.  </p>
+    
+<p class="Missionn"data-en=" Partnerships and Resources:
+        Our mission includes collaborating with local businesses, organizations, and government entities to strengthen resources and support for impactful community projects and initiatives."
+        data-ar="لشراكات والموارد : تشمل مهمتنا التعاون مع الشركات المحلية والمنظمات والهيئات الحكومية لتعزيز الموارد والدعم للمشاريع والمبادرات المجتمعية ذات التأثير الكبير">
+        <strong> Partnerships and Resources:</strong><br>
+        Our mission includes collaborating with local businesses, organizations, and government entities to strengthen resources and support for impactful community projects and initiatives.
+      </p>
+        
+        <p class="Missionn" data-en="  Students for the Future         We provide diverse opportunities for students to develop their personal and professional skills through bootcamps, workshops, and volunteering programs, ensuring they are well-prepared to succeed as future leaders in the job market."
+        data-ar="الطلاب من أجل المستقبل : نقدم فرصًا متنوعة للطلاب لتطوير مهاراتهم الشخصية والمهنية من خلال معسكرات التدريب وورش العمل وبرامج التطوع، لضمان استعدادهم للنجاح كقادة مستقبليين في سوق العمل.">  
+          <strong> Students for the Future</strong><br>
+        We provide diverse opportunities for students to develop their personal and professional skills through bootcamps, workshops, and volunteering programs, ensuring they are well-prepared to succeed as future leaders in the job market.</p>
+
+  </section>
+  
+  <section id="Goals">
+    <div style="display: flex; align-items: center; gap: 30px; padding: 50px; background-color: white; border-radius: 10px;">
+      <div class="goals-ph">
+        <img src="goals.png" alt="Goals">
+      </div>
+      <div class="goals-text">
+        <h2 class="goals-title" data-en="Goals" data-ar="أهدافنا ">Goals</h2>
+        <hr style="border: 0; height: 2px; background: linear-gradient(to right, #ff6600, #cc4202); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+        <p class="Goals1" data-en="Skill Development
+          To equip students with essential personal and professional skills through training programs, workshops, and hands-on volunteering experiences.
+      " data-ar=" تطوير المهارات:
+      تهدف إلى تزويد الطلاب بالمهارات الشخصية والمهنية الأساسية من خلال برامج التدريب، وورش العمل، وتجارب التطوع العملية.">
+          
+          <strong>Skill Development</strong><br>
+           To equip students with essential personal and professional skills through training programs, workshops, and hands-on volunteering experiences.</p>
+           <hr style="border: 0; height: 2px; background: linear-gradient(to right, #ff6600, #cc4202); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+
+
+        <p class="Goals1" data-en="Impactful Community Projects
+          To initiate and support sustainable community projects that address pressing social issues and make a positive impact on society.
+          " data-ar="المشاريع المجتمعية المؤثرة: البدء ودعم المشاريع المجتمعية المستدامة التي تعالج القضايا الاجتماعية الملحة وتحقق تأثيرًا إيجابيًا على المجتمع.">
+          <strong>Impactful Community Projects</strong><br>
+           To initiate and support sustainable community projects that address pressing social issues and make a positive impact on society.</p>
+           <hr style="border: 0; height: 2px; background: linear-gradient(to right, #ff6600, #cc4202); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+           <p class="Goals1" data-en="Collaboration
+            To build strong networks and partnerships with businesses, organizations, and institutions to expand opportunities and resources for our initiatives. " data-ar="التعاون: بناء شبكات وشراكات قوية مع الشركات والمنظمات والمؤسسات لتوسيع الفرص والموارد لمبادراتنا.">
+            <strong>Collaboration</strong><br>
+           To build strong networks and partnerships with businesses, organizations, and institutions to expand opportunities and resources for our initiatives.</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/BVT.JU" class="icon"><img src="facebook-new.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/bvt_ju?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="icon"><img src="icons8-instagram-50.png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/company/bvt-ju/posts/?feedView=all" class="icon"><img src="linkedin-ICON.webp" alt="LinkedIn"></a>
+    </div>
+    <p data-ar="© 2025 فريق التطوع للأعمال - جميع الحقوق محفوظة." data-en="&copy; 2025 Business Volunteer Team - All Rights Reserved">&copy; 2025 Business Volunteer Team - All Rights Reserved</p>
+</footer>
+<script>
+document.getElementById("language-selector").addEventListener("change", function() {
+  var lang = this.value; // تحديد اللغة المختارة
+  var elements = document.querySelectorAll("[data-en], [data-ar]"); // تحديد جميع العناصر التي تحتوي على نصوص
+
+  elements.forEach(function(element) {
+      // تغيير النص بناءً على اللغة المختارة
+      if (lang === "ar") {
+          element.innerText = element.getAttribute("data-ar");
+      } else {
+          element.innerText = element.getAttribute("data-en");
+      }
+  });
+});
+
+</script>
+</body>
+</html>
+  
+  
+
+  

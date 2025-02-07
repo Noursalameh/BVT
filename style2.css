@@ -1,0 +1,1580 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-image: url(1.png);
+  
+}
+
+/* Navigation Styles */
+nav {
+  background-color:#cc4202;/* #2C3E50;/*#531803; /* Orange co lor */
+  padding: 10px 30px; 
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.logo{flex: 0 0  auto;}
+.logo img{
+  height: 40px;
+  width: auto;
+}
+
+nav ul {
+  
+  list-style: none;
+  padding: 0;
+  margin: 0; 
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%); 
+  gap: 20px;
+  
+}
+/* القائمة المنسدلة للأجهزة الصغيرة */
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* تحسين القائمة للهواتف */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* إظهار زر القائمة المنسدلة */
+  }
+
+  nav ul {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    background-color: #cc4202;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    padding: 0;
+    z-index: 100;
+    transition: max-height 0.3s ease-in-out; /* جعل الفتح والإغلاق سلسًا */
+  }
+
+  nav ul.active {
+    max-height: 300px; /* فتح القائمة بسلاسة */
+    padding: 10px 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+
+nav ul li {
+  margin: 0 ;
+  
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+nav ul li a:hover {
+  color: #4b4955;
+}
+    #about {
+    background-image: url(1.png);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    display: flex;
+  flex-direction: column; /* ترتيب العناصر عموديًا */
+  
+  justify-content: center; /* توسيط عموديًا */
+  
+  text-align: center;
+  }
+/* Home Section Styles */
+.cover-section {
+  background: url('bvt\ photo.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  padding-top: 60px; /* Adjust if nav bar height changes */
+}
+
+.overlay {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.home-image {
+  max-width: 100%;
+  max-height: 70vh; /* Ensures the image fits well within the viewport */
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.BVT {
+ background-image: url(5.png);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  animation: fadeIn 2s ease-out;
+} 
+
+
+@media (max-width: 768px) {
+  .cover-section {
+    min-height: 50vh; /* تقليل الارتفاع بدون مشاكل في المحتوى */
+    padding-top: 20px;
+  }
+
+  .home-image {
+    max-height: 30vh; /* تصغير الصورة لتناسب الشاشة */
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .cover-section {
+    min-height: 55vh; /* زيادة طفيفة حتى لا يكون المحتوى مزدحم */
+    padding: 10px;
+  }
+
+  .team-member img {
+    width: 130px; /* تصغير الصور أكثر لتناسب الشاشات الصغيرة */
+    height: 130px;
+  }
+}
+
+/* Title Styles */
+.address h2 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #cc4202;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: slideFromTop 1.5s ease-out;
+}
+
+/* Content Styles */
+.con h3 {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color:#cc4202;
+  opacity: 0;
+  animation: fadeInText 2s ease-out 1.5s forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: scale(0.95); /* تأثير تكبير طفيف */
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-20px); /* تقليل الحركة لجعلها طبيعية */
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Events Section Styles */
+.event-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 234, 219, 0.8); /* لون مع شفافية */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* يجعل النص في الأسفل */
+  opacity: 0;
+  transition: 0.5s ease;
+  padding-bottom: 10px; /* مسافة من الأسفل */
+}
+
+.event-card:hover .event-overlay {
+  opacity: 1;
+}
+
+.event-overlay h3 {
+  color:#ffffff;
+  font-size: 18px;
+  text-align: center;
+  position: absolute;
+  bottom: 10px; /* يضعه في الأسفل */
+  left: 50%;
+  transform: translateX(-50%); /* يجعله في المنتصف أفقيًا */
+  width: 90%;
+}
+@media (max-width: 768px) {
+  .events-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; /* إضافة مسافة بين البطاقات */
+  }
+}
+
+@media (max-width: 480px) {
+  .events-container {
+    grid-template-columns: 1fr;
+    gap: 10px; /* تقليل التباعد قليلاً للهواتف الصغيرة */
+  }
+
+  .event-card {
+    min-height: 220px; /* استخدام min-height بدلاً من height لجعل التصميم أكثر مرونة */
+    padding: 10px; /* إضافة تباعد داخلي لمنع المحتوى من الالتصاق بالحواف */
+  }
+
+  .event-overlay h3 {
+    font-size: 0.9rem; /* تصغير النص بشكل أكثر دقة */
+  }
+
+  .event-overlay p {
+    font-size: 0.75rem; /* تصغير النص أكثر ليكون متناسبًا */
+  }
+}
+
+.event-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-member:hover,
+.founder-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Hover Box Styling */
+/* صندوق الأحداث (Hover Box) 
+.hover-box {
+  position: relative; /* تغيير من absolute إلى relative لتجنب مشاكل التداخل 
+  width: 200px;
+  padding: 20px;
+  background-color: #f1e5e5;
+  color: #3b1203;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto; /* لضمان محاذاة الصناديق بشكل متناسق 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hover-box:hover {
+  transform: scale(1.05); /* تكبير عند التمرير 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل عند التمرير 
+}
+
+.hover-box .description {
+  display: none; /* إخفاء الوصف افتراضيًا 
+  position: absolute;
+  top: 110%; /* يظهر أسفل العنصر 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  padding: 10px;
+  background-color: #00bcd4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 10;
+  opacity: 0; /* إضافة تأثير الظهور 
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hover-box:hover .description {
+  display: block; /* إظهار الوصف عند التمرير 
+  opacity: 1; /* تأثير الظهور 
+  transform: translateX(-50%) translateY(10px); /* تحريك بسيط للأسفل 
+ 
+}
+
+/* الصور داخل صندوق الأحداث 
+#events .logo-events {
+  display: block;
+  margin: 20px auto;
+  background-color: #3b1203;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#events .logo-events:hover {
+  transform: scale(1.1); /* تكبير الصورة عند التمرير 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل عند التمرير 
+}
+
+/* Workshops Section Styles
+#workshops{
+  padding: 50px 20px;
+  background-color: #EFE6DD;
+  text-align: center;
+  color:  #3b1203;
+  background-image: url(1.png);
+}
+.carousel {
+
+  border-radius: 15px 50px;
+  background:#cc4202;
+  padding: 20px;
+  width: 80%; /* ضبط العرض 
+  margin: 20px auto; /* محاذاة في المنتصف 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* لجعل الأزرار في مكانها الصحيح 
+  overflow: hidden; /* إخفاء الصور الزائدة /
+}
+
+.carousel:hover {
+  transform: scale(1.05); /* تكبير عند التمرير*
+  box-shadow: none; /* زيادة الظل عند التمرير /
+}
+
+.carousel .carousel-item {
+  flex: 0 0 auto; /* الحفاظ على الحجم الأصلي للصورة 
+  margin: 0 10px; /* تباعد بين العناصر 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel .carousel-item img {
+  border-radius: 10px;
+  width: 200px; /* ضبط حجم الصور 
+  height: auto;
+}
+
+.carousel .carousel-item:hover {
+  transform: scale(1.1); /* تكبير عند التمرير /
+  box-shadow: none /* زيادة الظل عند التمرير /
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color:#cc4202;
+  color: #ffeadb;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.carousel button:hover {
+  background-color:  #ffeadb
+}
+
+.carousel button.prev {
+  left: 10px; /* زر الرجوع 
+}
+
+.carousel button.next {
+  right: 10px; /* زر التقدم 
+}  */
+
+#founder {
+  background-image: url(1.png);
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 1.5rem; 
+color: #cc4202;
+}
+.section-title{
+  text-align: center;
+}
+.founder-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.founder-item {
+  flex: 1 1 calc(25% - 20px); 
+  max-width: calc(25% - 20px); 
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow none;
+}
+
+.founder-item:hover {
+  transform: scale(1.1);
+  box-shadow:none;
+}
+
+.founder-item img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* لجعل الصورة دائرية */
+  object-fit: cover; /* لضبط الصورة داخل الإطار */
+  box-shadow: none;
+  transition: transform 0.3s ease;
+}
+
+.founder-item h3 {
+  margin-top: 10px;
+  font-size: 1em;
+  color:#cc4202;
+}@media (max-width: 414px) {
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* إضافة تباعد بين الأعضاء */
+    padding: 10px; /* تحسين المسافات */
+  }
+
+  .team-member {
+    flex: 1 1 100%;
+    max-width: 90%; /* تقليل عرض العنصر لمنع التمدد الزائد */
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* تأثير سلس عند التفاعل */
+  }
+
+  .team-member img {
+    width: 130px; /* تصغير الصورة */
+    height: 130px;
+    border-radius: 50%; /* جعل الصور دائرية */
+  }
+
+  .team-member h3 {
+    font-size: 0.9rem; /* تصغير النص ليتناسب مع الهواتف */
+  }
+
+  .team-member:hover {
+    transform: scale(1.05); /* تكبير خفيف عند التمرير */
+  }
+}
+
+
+
+/* Team Leaders Section Styles */
+#team-leaders {
+  background-image: url(1.png);
+  color:  #cc4202;
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 1.5rem; 
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* يسمح بتقسيم العناصر إلى صفوف متعددة إذا لم يكف العرض */
+  gap: 20px; /* المسافة بين العناصر */
+}
+
+.team-member {
+  flex: 1 1 calc(25% - 20px);
+  max-width: calc(25% - 20px);
+}
+
+
+.team-member {
+  flex: 1 1 calc(25% - 20px); /* كل عنصر يأخذ 25% من العرض */
+  max-width: calc(25% - 20px); /* الحد الأقصى لعرض العنصر */
+  margin: 10px 0;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow none;
+}
+
+.team-member:hover {
+  transform: scale(1.1); /* تكبير الصورة عند التمرير */
+  box-shadow: none; /* إضافة ظل ديناميكي */
+}
+
+.team-member img {
+  width: 200px; /* عرض الصورة */
+  height: 200px; /* ارتفاع الصورة */
+  border-radius: 50%; /* يجعل الصورة دائرية */
+  object-fit: cover; /* يضمن ملء الصورة للإطار بشكل متناسق */
+  box-shadow: none; /* إضافة ظل لطيف للصورة */
+  transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+  transform: rotate(10deg);
+  /*transform: scale(1.1);  /* تدوير خفيف عند التمرير */
+}
+
+.team-member h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #666;
+}
+.names {  
+  font-size: 1.5rem !important;
+  color: #cc4202 !important;
+}
+
+
+
+/* Media Queries for Responsive Design */
+
+/* الهواتف المحمولة الصغيرة (شاشات أقل من 480 بكسل) */
+/* الشاشات الصغيرة (أقل من 480px) */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column; /* ترتيب القائمة عموديًا */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cover-section {
+    min-height: 60vh; /* جعل الارتفاع مرنًا */
+    padding: 15px;
+  }
+
+  .home-image {
+    max-height: 35vh; /* تصغير الصور */
+    width: auto;
+    border-radius: 10px;
+  }
+
+  .team-member {
+    flex: 1 1 100%;
+    max-width: 90%; /* تقليل العرض لتجنب التمدد */
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* جعل الصور دائرية */
+  }
+
+  .member-item {
+    width: 110px;
+    height: auto;
+  }
+}
+
+/* الأجهزة اللوحية (من 481px إلى 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  nav ul {
+    flex-direction: row; /* ترتيب العناصر أفقيًا */
+    gap: 15px;
+  }
+
+  .cover-section {
+    min-height: 75vh; /* تحسين الارتفاع */
+  }
+
+  .team-member {
+    flex: 1 1 calc(50% - 20px); /* عنصرين في كل صف */
+    max-width: calc(50% - 20px);
+  }
+
+  .team-member img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .member-item {
+    width: 140px;
+    height: auto;
+  }
+}
+
+/* الشاشات الكبيرة (أكبر من 768px) */
+@media (min-width: 769px) {
+  .team-member {
+    flex: 1 1 calc(25% - 20px); /* 4 عناصر في الصف */
+    max-width: calc(25% - 20px);
+  }
+
+  .team-member img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .member-item {
+    width: 200px;
+    height: auto;
+  }
+}
+
+
+/*#team-leaders {
+  padding: 50px 20px;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  margin: 10px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+*/
+/* Media Queries for Responsive Design */
+
+/* الهواتف المحمولة الصغيرة (شاشات أقل من 480 بكسل) */
+
+/* الشاشات الصغيرة (أقل من 480px) */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column; /* ترتيب القائمة عموديًا */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cover-section {
+    min-height: 60vh; /* جعل الارتفاع مرنًا */
+    padding: 15px;
+  }
+
+  .home-image {
+    max-height: 35vh; /* تصغير الصور */
+    width: auto;
+    border-radius: 10px;
+  }
+
+  .team-member {
+    flex: 1 1 100%;
+    max-width: 90%; /* تقليل العرض لتجنب التمدد */
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* جعل الصور دائرية */
+  }
+
+  .member-item {
+    width: 110px;
+    height: auto;
+  }
+
+  #Employee h2, #developers h2 {
+    font-size: 1.5rem; /* تحسين حجم العناوين */
+  }
+
+  .member-item .description, .developer-item p, .developer-item1 p {
+    font-size: 0.8rem; /* تصغير النصوص */
+  }
+
+  #developers {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .developer-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  #developers .developer-item1 img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+/* الأجهزة اللوحية (من 481px إلى 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  nav ul {
+    flex-direction: row; /* ترتيب العناصر أفقيًا */
+    gap: 15px;
+  }
+
+  .team-member {
+    flex: 1 1 calc(50% - 20px); /* عنصرين في كل صف */
+    max-width: calc(50% - 20px);
+  }
+
+  .team-member img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .member-item {
+    width: 140px;
+    height: auto;
+  }
+
+  .cover-section {
+    height: 80vh; /* زيادة طفيفة في الارتفاع */
+  }
+
+  #Employee h2, #developers h2 {
+    font-size: 2rem;
+  }
+
+  .member-item .description {
+    font-size: 1rem;
+  }
+
+  #developers {
+    gap: 20px;
+  }
+
+  .developer-item {
+    width: calc(50% - 20px); /* عنصرين في الصف */
+  }
+}
+
+/* الشاشات الكبيرة (أكبر من 768px) */
+@media (min-width: 769px) {
+  .team-member {
+    flex: 1 1 calc(25% - 20px); /* 4 عناصر في الصف */
+    max-width: calc(25% - 20px);
+  }
+
+  .team-member img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .member-item {
+    width: 200px;
+    height: auto;
+  }
+
+  #Employee h2, #developers h2 {
+    font-size: 2.5rem;
+  }
+
+  .member-item .description {
+    font-size: 1.2rem;
+  }
+
+  #developers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .developer-item, .developer-item1 {
+    width: 300px;
+    text-align: center;
+  }
+
+  .developer-item img, .developer-item1 img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .developer-item h3, .developer-item1 h3 {
+    font-size: 1.5rem;
+    color: #cc4202;
+  }
+
+  .developer-item p, .developer-item1 p {
+    font-size: 1rem;
+    color: #666;
+  }
+}
+
+/* Events Section Styles */
+#events {
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#events h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.event-card {
+  position: relative;
+  width: 100%;
+  height:350px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover img {
+  transform: scale(1.1);
+}
+
+.event-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-card:hover .event-overlay {
+  opacity: 1;
+}
+
+.event-overlay h3 {
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+
+.event-overlay p {
+  font-size:17px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; /* إضافة مسافة بين البطاقات */
+  }
+}
+
+@media (max-width: 480px) {
+  .events-container {
+    grid-template-columns: 1fr;
+    gap: 10px; /* تقليل التباعد قليلاً للهواتف الصغيرة */
+  }
+
+  .event-card {
+    min-height: 230px; /* استخدام min-height بدلاً من height لجعل التصميم أكثر مرونة */
+    padding: 10px; /* إضافة تباعد داخلي لمنع المحتوى من الالتصاق بالحواف */
+  }
+
+  .event-overlay h3 {
+    font-size: 0.9rem; /* تصغير النص بشكل أكثر دقة */
+  }
+
+  .event-overlay p {
+    font-size: 0.75rem; /* تصغير النص أكثر ليكون متناسبًا */
+  }
+}
+
+/* تحسين التصميم لأجهزة iPhone XR وما يشابهها */
+@media (max-width: 414px) {
+  .event-card {
+    min-height: 250px; /* تقليل ارتفاع البطاقات */
+  }
+
+  .event-overlay {
+    padding-bottom: 10px; /* إضافة بعض المساحة للنصوص */
+  }
+
+  .event-overlay h3 {
+    font-size: 0.95rem; /* تصغير النص */
+  }
+
+  .event-overlay p {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* Volunteer Spotlight Section */
+#Employee {
+  background-image: url(1.png);
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#Employee h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #cc4202;
+}
+
+.member {
+  display: flex;
+  flex-wrap: wrap; /* يسمح للعناصر بالانتقال للسطر التالي عند الحاجة */
+  justify-content: center; /* محاذاة العناصر في الوسط */
+  gap: 20px;
+}
+
+.member-item {
+  position: relative;
+  width: calc(33.33% - 20px); /* عرض متساوي لكل عنصر مع الحفاظ على المسافة بين العناصر */
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px; /* إضافة مسافة بين الصفوف */
+}
+
+.member-item img {
+  width: 300px;
+  height: auto;
+  border-radius:51%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.member-item:hover {
+  transform: scale(1.1);
+}
+
+.member-item .description {
+  margin-top: 20px;
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.member-item .background-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.4), rgba(204, 66, 2, 0.2));
+  border-radius: 20px;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.member-item:hover .background-effect {
+  opacity: 1;
+}
+
+
+
+
+
+#contact {
+  padding: 10px 10px;
+  background: linear-gradient(135deg,#ffeadb,#eb895b);
+color:  #3b1203;
+  text-align: center;
+}
+
+#contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact form input, #contact form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid  #ffeadb;
+  border-radius: 5px;
+}
+
+#contact form button {
+  background-color:#cc4202;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+ /* cursor: pointer;*/
+} #contact form button {
+  background-color: #cc4202;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+  background-color: #ff6600;
+}
+
+.social-icons {
+  position: relative;
+  bottom: 0; 
+left: 0;
+margin: 10px; 
+z-index: 1000;
+gap: 15px;}
+
+.social-icons a img {
+height: 30px;
+width:30px;
+/*filter:brightness() invert(1); */
+transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+transform: scale(1.1); 
+}
+
+/* Footer Styles */
+footer {
+  background-color:#cc4202;
+color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.active {
+  opacity: 1;
+  transform: translateY(0);
+} 
+.language-switch {
+  margin-left: auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(45deg, #ff6600, #ff9900);
+  color: rgb(255, 230, 230);
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #eb895b;
+}
+
+.language-switch:hover {
+  background-color: #eb895b;
+
+  background: linear-gradient(45deg, #ff9900, #ff6600);
+}
+
+
+
+/*.language-switch {
+  margin-left: auto;
+  margin-top: 10px;
+  padding: 6px 15px;
+  border-radius: 3px;
+  border: none;
+  background: linear-gradient(45deg, #ff6600, #ff9900);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em; 
+}
+
+.language-switch:hover {
+background: linear-gradient(45deg, #ff9900, #ff6600);
+} /* Media Queries for Responsive Design */
+
+/* الهواتف المحمولة الصغيرة (شاشات أقل من 480 بكسل) */
+/* الشاشات الصغيرة (أقل من 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  /* قائمة التنقل */
+  nav {
+    padding: 10px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  /* الغلاف */
+  .cover-section {
+    min-height: 55vh;
+    padding: 15px;
+  }
+
+  .home-image {
+    max-height: 35vh;
+    width: auto;
+    border-radius: 10px;
+  }
+
+  /* أعضاء الفريق */
+  .team-container,
+  .founder-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .team-member,
+  .founder-item,
+  .developer-item,
+  .developer-item1,
+  .member-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .team-member img,
+  .founder-item img,
+  .developer-item img,
+  .developer-item1 img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  }
+
+  /* أحداث */
+  .events-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .event-card {
+    min-height: 230px;
+    padding: 10px;
+  }
+
+  .event-overlay h3 {
+    font-size: 1rem;
+  }
+
+  .event-overlay p {
+    font-size: 0.85rem;
+  }
+
+  /* قسم المتطوعين والمطورين */
+  #Employee h2,
+  #developers h2,
+  #founder h2,
+  #team-leaders h2 {
+    font-size: 1.5rem;
+  }
+
+  .member-item .description,
+  .developer-item p,
+  .developer-item1 p {
+    font-size: 0.8rem;
+  }
+
+  #developers {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .developer-item,
+  .developer-item1 {
+    width: 100%;
+  }
+
+  #developers .developer-item1 img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+}
+
+/* الأجهزة اللوحية (من 481px إلى 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .team-member,
+  .founder-item,
+  .developer-item,
+  .developer-item1,
+  .member-item {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .team-member img,
+  .founder-item img,
+  .developer-item img,
+  .developer-item1 img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cover-section {
+    height: 80vh;
+  }
+
+  #Employee h2,
+  #developers h2,
+  #founder h2,
+  #team-leaders h2 {
+    font-size: 2rem;
+  }
+
+  .member-item .description {
+    font-size: 1rem;
+  }
+
+  .events-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .event-card {
+    height: 300px;
+  }
+
+  .event-overlay h3 {
+    font-size: 1.3rem;
+  }
+
+  .event-overlay p {
+    font-size: 1rem;
+  }
+}
+
+/* الشاشات الكبيرة (أكبر من 768px) */
+@media (min-width: 769px) {
+  .team-member,
+  .founder-item,
+  .developer-item,
+  .developer-item1,
+  .member-item {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+  }
+
+  .team-member img,
+  .founder-item img,
+  .developer-item img,
+  .developer-item1 img {
+    width: 250px;
+    height: 250px;
+  }
+
+  #Employee h2,
+  #developers h2,
+  #founder h2,
+  #team-leaders h2 {
+    font-size: 2.5rem;
+  }
+
+  .member-item .description {
+    font-size: 1.2rem;
+  }
+
+  .events-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .event-card {
+    height: 350px;
+  }
+
+  .event-overlay h3 {
+    font-size: 1.8rem;
+  }
+
+  .event-overlay p {
+    font-size: 1.2rem;
+  }
+
+  #developers {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .developer-item,
+  .developer-item1 {
+    width: 300px;
+    text-align: center;
+  }
+
+  .developer-item img,
+  .developer-item1 img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .developer-item h3,
+  .developer-item1 h3 {
+    font-size: 1.5rem;
+    color: #cc4202;
+  }
+
+  .developer-item p,
+  .developer-item1 p {
+    font-size: 1rem;
+    color: #666;
+  }
+}
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-image: url(1.png);
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #cc4202;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #4b4955;
+}
+
+/* Responsive Menu */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav ul {
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    background-color: #cc4202;
+    top: 100%;
+    left: 0;
+    text-align: center;
+    transition: max-height 0.3s ease-in-out;
+  }
+  nav ul.active {
+    max-height: 300px;
+    padding: 10px 0;
+  }
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* Developers Section */
+#developers {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* مسافات بين الأعضاء */
+  text-align: center;
+  flex-wrap: wrap;
+}
+.developer-item1{
+  width: 300px; /* حجم أكبر للأعضاء */
+  text-align: center;
+}
+.developer-item1 img {
+  width:300px; /* حجم الصورة */
+  height: 300px;
+  border-radius: 50%; /* جعل الصورة دائرية */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل بسيط */
+  margin-bottom: 10px; 
+}
+.developer-item {
+  width: 300px; /* حجم أكبر للأعضاء */
+  text-align: center;
+}
+
+#developers h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #cc4202;
+  text-align: center;
+  width: 100%;
+}
+
+.developer-item img {
+  width: 250px; /* حجم الصورة */
+  height: 250px;
+  border-radius: 50%; /* جعل الصورة دائرية */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ظل بسيط */
+  margin-bottom: 10px;
+}
+
+.developer-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #cc4202;
+}
+
+.developer-item p {
+  font-size: 1rem;
+  color: #666;
+}
+.developer-item1 h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #cc4202;
+}
+
+.developer-item1 p {
+  font-size: 1rem;
+  color: #666;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .developer-container {
+    gap: 20px;
+  }
+  .special-developers {
+    flex-wrap: wrap;
+  }
+  .developer-item {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .developer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .special-developers {
+    flex-direction: column;
+    align-items: center;
+  }
+  .developer-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .developer-item img {
+    width: 150px;
+    height: 150px;
+  }
+  #developers h2 {
+    font-size: 2rem;
+  }
+}
